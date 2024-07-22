@@ -12,6 +12,7 @@ public class EnemyMovement : MonoBehaviour
     [SerializeField] private int maxHealth = 100;
     [SerializeField] private float fillSpeed = 0.5f;
     [SerializeField] private Gradient colorGradient;
+    [SerializeField] private PlayerMoneyManager playerMoneyManager;
     private int currentHealth;
 
     private Tween healthBarFillTween;
@@ -21,6 +22,16 @@ public class EnemyMovement : MonoBehaviour
     {
         currentHealth = maxHealth;
         UpdateHealthBar();
+
+        if (PlayerPrefs.HasKey("EnemyDamage"))
+        {
+            this.damage = PlayerPrefs.GetInt("EnemyDamage");
+        }
+
+        if (playerMoneyManager == null)
+        {
+            playerMoneyManager = FindObjectOfType<PlayerMoneyManager>();
+        }
     }
 
     void Update()
@@ -74,6 +85,7 @@ public class EnemyMovement : MonoBehaviour
 
         if (currentHealth <= 0)
         {
+            AddMoney(50);
             Destroy(gameObject);
         }
     }
@@ -82,12 +94,55 @@ public class EnemyMovement : MonoBehaviour
     {
         healthBarFillTween?.Kill();
         healthBarColorTween?.Kill();
- 
-    }
-    public void UpgradeDamage()
-    {
-        this.damage += damageUpgradeAmount;
-        Debug.Log("Damage Upgraded");
     }
 
+    public void UpgradeDamage()
+    {
+        if (playerMoneyManager != null)
+        {
+            int currentMoney = playerMoneyManager.GetMoney();
+            if (currentMoney >= 100)
+            {
+                this.damage += damageUpgradeAmount;
+                playerMoneyManager.SetMoney(currentMoney - 100);
+                PlayerPrefs.SetInt("EnemyDamage", this.damage); // Update the player preference
+                PlayerPrefs.Save();
+                Debug.Log("Damage Upgraded to: " + this.damage);
+            }
+            else
+            {
+                Debug.Log("Not enough money to upgrade damage.");
+            }
+        }
+        else
+        {
+            Debug.LogWarning("PlayerMoneyManager not found.");
+        }
+    }
+
+    public void AddMoney(int amount)
+    {
+        if (playerMoneyManager != null)
+        {
+            int currentMoney = playerMoneyManager.GetMoney();
+            playerMoneyManager.SetMoney(currentMoney + amount);
+        }
+        else
+        {
+            Debug.LogWarning("PlayerMoneyManager not found.");
+        }
+    }
+
+    public void SubtractMoney(int amount)
+    {
+        if (playerMoneyManager != null)
+        {
+            int currentMoney = playerMoneyManager.GetMoney();
+            playerMoneyManager.SetMoney(currentMoney - amount);
+        }
+        else
+        {
+            Debug.LogWarning("PlayerMoneyManager not found.");
+        }
+    }
 }
