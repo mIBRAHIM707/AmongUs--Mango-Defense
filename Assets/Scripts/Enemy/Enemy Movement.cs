@@ -13,7 +13,12 @@ public class EnemyMovement : MonoBehaviour
     [SerializeField] private float fillSpeed = 0.5f;
     [SerializeField] private Gradient colorGradient;
     [SerializeField] private PlayerMoneyManager playerMoneyManager;
+<<<<<<< HEAD
     private int _MoneyAmount = 50;
+=======
+    [SerializeField] private PlayerLivesManager playerLivesManager;
+    private int currentHealth;
+>>>>>>> 5c60f80c6420129838409a2da668838a2c13d4b1
 
     private int currentHealth;
     
@@ -40,9 +45,19 @@ public class EnemyMovement : MonoBehaviour
     {
         transform.position += Vector3.down * speed * Time.deltaTime;
 
-        if (transform.position.y < -13)
+        if (transform.position.y < -8.81)
         {
             Destroy(gameObject);
+
+            if (playerLivesManager != null)
+            {
+                playerLivesManager.DeductLife(); 
+                Debug.Log("Life deducted. Remaining lives: " + playerLivesManager.GetLives()); 
+            }
+            else
+            {
+                Debug.LogWarning("PlayerLivesManager not found.");
+            }
         }
     }
 
@@ -107,7 +122,7 @@ public class EnemyMovement : MonoBehaviour
             {
                 this.damage += damageUpgradeAmount;
                 playerMoneyManager.SetMoney(currentMoney - 100);
-                PlayerPrefs.SetInt("EnemyDamage", this.damage); // Update the player preference
+                PlayerPrefs.SetInt("EnemyDamage", this.damage); 
                 PlayerPrefs.Save();
                 Debug.Log("Damage Upgraded to: " + this.damage);
             }
