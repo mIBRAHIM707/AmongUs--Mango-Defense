@@ -2709,7 +2709,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 551, y: 877}
+  m_AnchoredPosition: {x: 518, y: 877}
   m_SizeDelta: {x: 239.8, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1404987935
@@ -3420,6 +3420,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   reticleManager: {fileID: 221329501}
+  deselectSound: {fileID: 0}
+  audioSource: {fileID: 0}
+  soundDelay: 0.5
 --- !u!1 &1817721074
 GameObject:
   m_ObjectHideFlags: 0

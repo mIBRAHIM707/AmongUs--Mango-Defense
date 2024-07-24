@@ -13,14 +13,14 @@ public class EnemyMovement : MonoBehaviour
     [SerializeField] private float fillSpeed = 0.5f;
     [SerializeField] private Gradient colorGradient;
     [SerializeField] private PlayerMoneyManager playerMoneyManager;
-
-    private int _MoneyAmount = 50;
-
     [SerializeField] private PlayerLivesManager playerLivesManager;
-    private int currentHealth;
 
-    //private int currentHealth;
-    
+    [SerializeField] private AudioClip deathSound;
+    [SerializeField] private float soundVolume = 1.0f;
+
+    private PlaySound enemyBody;
+    private int _MoneyAmount = 50;
+    private int currentHealth;
     private Tween healthBarFillTween;
     private Tween healthBarColorTween;
 
@@ -38,6 +38,13 @@ public class EnemyMovement : MonoBehaviour
         {
             playerMoneyManager = FindObjectOfType<PlayerMoneyManager>();
         }
+
+        // Get the EnemyBody component from the child GameObject
+        enemyBody = GetComponentInChildren<PlaySound>();
+        if (enemyBody == null)
+        {
+            Debug.LogWarning("EnemyBody component not found on child GameObject.");
+        }
     }
 
     void Update()
@@ -50,8 +57,8 @@ public class EnemyMovement : MonoBehaviour
 
             if (playerLivesManager != null)
             {
-                playerLivesManager.DeductLife(); 
-                Debug.Log("Life deducted. Remaining lives: " + playerLivesManager.GetLives()); 
+                playerLivesManager.DeductLife();
+                Debug.Log("Life deducted. Remaining lives: " + playerLivesManager.GetLives());
             }
             else
             {
@@ -95,6 +102,12 @@ public class EnemyMovement : MonoBehaviour
         if (previousHealth != currentHealth)
         {
             UpdateHealthBar();
+
+            // Play hit sound on the enemy's body
+            if (enemyBody != null)
+            {
+                enemyBody.PlayHitSound();
+            }
         }
 
         Debug.Log("Damage taken. Current health: " + currentHealth);
@@ -102,6 +115,13 @@ public class EnemyMovement : MonoBehaviour
         if (currentHealth <= 0)
         {
             AddMoney(_MoneyAmount);
+
+            // Play death sound
+            if (deathSound != null)
+            {
+                AudioSource.PlayClipAtPoint(deathSound, transform.position, soundVolume);
+            }
+
             Destroy(gameObject);
         }
     }
@@ -113,11 +133,10 @@ public class EnemyMovement : MonoBehaviour
     }
 
     public void UpgradeDamage()
-{
-    this.damage += damageUpgradeAmount;
-    Debug.Log("Damage Upgraded to: " + this.damage);
-}
-
+    {
+        this.damage += damageUpgradeAmount;
+        Debug.Log("Damage Upgraded to: " + this.damage);
+    }
 
     public void AddMoney(int amount)
     {
