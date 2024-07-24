@@ -113,28 +113,11 @@ public class EnemyMovement : MonoBehaviour
     }
 
     public void UpgradeDamage()
-    {
-        if (playerMoneyManager != null)
-        {
-            int currentMoney = playerMoneyManager.GetMoney();
-            if (currentMoney >= 100)
-            {
-                this.damage += damageUpgradeAmount;
-                playerMoneyManager.SetMoney(currentMoney - 100);
-                PlayerPrefs.SetInt("EnemyDamage", this.damage); 
-                PlayerPrefs.Save();
-                Debug.Log("Damage Upgraded to: " + this.damage);
-            }
-            else
-            {
-                Debug.Log("Not enough money to upgrade damage.");
-            }
-        }
-        else
-        {
-            Debug.LogWarning("PlayerMoneyManager not found.");
-        }
-    }
+{
+    this.damage += damageUpgradeAmount;
+    Debug.Log("Damage Upgraded to: " + this.damage);
+}
+
 
     public void AddMoney(int amount)
     {
