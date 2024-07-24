@@ -3,14 +3,7 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags:
-  - Wall
-  - Projectile
-<<<<<<< HEAD
-  - button
-=======
-  - Enemy
->>>>>>> 5c60f80c6420129838409a2da668838a2c13d4b1
+  tags: []
   layers:
   - Default
   - TransparentFX
