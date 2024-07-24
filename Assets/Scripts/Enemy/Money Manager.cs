@@ -9,6 +9,7 @@ public class PlayerMoneyManager : MonoBehaviour
     private void Start()
     {
         // Update the UI text with the initial money value
+        moneyText.text = "0";
         UpdateMoneyUI(GetMoney());
     }
 

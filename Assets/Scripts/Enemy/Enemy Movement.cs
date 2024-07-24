@@ -13,8 +13,10 @@ public class EnemyMovement : MonoBehaviour
     [SerializeField] private float fillSpeed = 0.5f;
     [SerializeField] private Gradient colorGradient;
     [SerializeField] private PlayerMoneyManager playerMoneyManager;
-    private int currentHealth;
+    private int _MoneyAmount = 50;
 
+    private int currentHealth;
+    
     private Tween healthBarFillTween;
     private Tween healthBarColorTween;
 
@@ -85,7 +87,7 @@ public class EnemyMovement : MonoBehaviour
 
         if (currentHealth <= 0)
         {
-            AddMoney(50);
+            AddMoney(_MoneyAmount);
             Destroy(gameObject);
         }
     }

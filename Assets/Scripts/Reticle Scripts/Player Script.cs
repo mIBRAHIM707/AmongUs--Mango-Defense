@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerScript : MonoBehaviour
 {
-    [SerializeField] private ReticleScript reticleManager;
+    [SerializeField] public ReticleScript reticleManager;
 
     private void OnMouseDown()
     {
