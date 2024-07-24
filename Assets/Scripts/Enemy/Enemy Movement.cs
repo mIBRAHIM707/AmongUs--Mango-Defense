@@ -95,34 +95,38 @@ public class EnemyMovement : MonoBehaviour
 
     private void TakeDamage(int damage)
     {
-        int previousHealth = currentHealth;
-        currentHealth -= damage;
-        currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
-
-        if (previousHealth != currentHealth)
+        if(this.transform.position.y < -1.5)
         {
-            UpdateHealthBar();
+            int previousHealth = currentHealth;
+            currentHealth -= damage;
+            currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
 
-            // Play hit sound on the enemy's body
-            if (enemyBody != null)
+            if (previousHealth != currentHealth)
             {
-                enemyBody.PlayHitSound();
-            }
-        }
+                UpdateHealthBar();
 
-        Debug.Log("Damage taken. Current health: " + currentHealth);
-
-        if (currentHealth <= 0)
-        {
-            AddMoney(_MoneyAmount);
-
-            // Play death sound
-            if (deathSound != null)
-            {
-                AudioSource.PlayClipAtPoint(deathSound, transform.position, soundVolume);
+                // Play hit sound on the enemy's body
+                if (enemyBody != null)
+                {
+                    enemyBody.PlayHitSound();
+                }
             }
 
-            Destroy(gameObject);
+            Debug.Log("Damage taken. Current health: " + currentHealth);
+
+            if (currentHealth <= 0)
+            {
+                AddMoney(_MoneyAmount);
+
+                // Play death sound
+                if (deathSound != null)
+                {
+                    AudioSource.PlayClipAtPoint(deathSound, transform.position, soundVolume);
+                }
+
+                Destroy(gameObject);
+                FindObjectOfType<EnemyManager>().OnEnemyDefeated();
+            }
         }
     }
 
