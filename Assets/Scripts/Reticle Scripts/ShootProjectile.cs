@@ -9,6 +9,9 @@ public class ShootProjectile : MonoBehaviour
     [SerializeField] private float speed;
     private GameObject currentProjectile; // Currently selected projectile
 
+    //New
+    public GameObject bombPrefab;
+
     void Start()
     {
         // Default to the first projectile in the list
@@ -42,3 +45,5 @@ public class ShootProjectile : MonoBehaviour
         }
     }
 }
+
+
