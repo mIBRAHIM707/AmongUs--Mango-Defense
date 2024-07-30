@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ReticleScript : MonoBehaviour
+public class ShootTriple : MonoBehaviour
 {
     [Header("Animation Settings")]
     [SerializeField] private AnimationCurve animCurve;
@@ -21,9 +21,6 @@ public class ReticleScript : MonoBehaviour
     [SerializeField] private List<GameObject> launchPoints = new List<GameObject>();
     private List<Vector3> pointStartPos = new List<Vector3>();
     private GameObject selectedObject;
-
-    [Header("Projectile Settings")]
-    [SerializeField] private int projectileCount = 1; // Default to 1 projectile
 
     private void Awake()
     {
@@ -141,7 +138,7 @@ public class ReticleScript : MonoBehaviour
 
     private void FireProjectiles()
     {
-        for (int i = 0; i < launchPoints.Count && i < projectileCount; i++)
+        for (int i = 0; i < launchPoints.Count; i++)
         {
             if (launchPoints[i] != null)
             {
