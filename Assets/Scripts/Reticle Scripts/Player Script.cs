@@ -1,16 +1,18 @@
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerScript : MonoBehaviour
 {
-    [SerializeField] public ReticleScript reticleManager;
+    [SerializeField] public List<ReticleScript> reticles;
     [SerializeField] private AudioClip deselectSound;
     [SerializeField] private AudioSource audioSource;
-    [SerializeField] private float soundDelay = 0.5f; // Delay in seconds
+    [SerializeField] private float soundDelay = 0.5f;
+    private int currentReticle = 0;
+    private bool triple = false;
 
     private void Start()
     {
-        // Optionally check if AudioSource is assigned; if not, add it
         if (audioSource == null)
         {
             audioSource = gameObject.GetComponent<AudioSource>();
@@ -21,30 +23,35 @@ public class PlayerScript : MonoBehaviour
         }
     }
 
+    private void Update()
+    {
+        if (triple) currentReticle = 1;
+    }
+
     private void OnMouseDown()
     {
         Debug.Log("Player clicked: " + this.gameObject.name);
-        reticleManager.Selected(this.gameObject);
+        reticles[currentReticle].Selected(this.gameObject);
     }
 
     private void OnMouseUp()
     {
         Debug.Log("Player released: " + this.gameObject.name);
-        reticleManager.Deselect();
+        reticles[currentReticle].Deselect();
 
-        // Start the coroutine to play the sound after a delay
         StartCoroutine(PlaySoundWithDelay());
     }
 
     private IEnumerator PlaySoundWithDelay()
     {
-        // Wait for the specified delay
         yield return new WaitForSeconds(soundDelay);
-
-        // Play the sound
         if (deselectSound != null && audioSource != null)
         {
             audioSource.PlayOneShot(deselectSound);
         }
+    }
+    public void UnlockTripleReticle()
+    {
+        triple = true;
     }
 }

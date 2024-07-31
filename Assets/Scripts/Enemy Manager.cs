@@ -2,13 +2,12 @@ using UnityEngine;
 
 public class EnemyManager : MonoBehaviour
 {
-    [SerializeField] private LevelManager levelManager; // Reference to the LevelManager script
+    [SerializeField] private LevelManager levelManager; 
     private int totalEnemies;
     private int remainingEnemies;
 
     void Start()
     {
-        // Initialize total and remaining enemies count
         totalEnemies = FindObjectsOfType<EnemyMovement>().Length;
         remainingEnemies = totalEnemies;
     }
