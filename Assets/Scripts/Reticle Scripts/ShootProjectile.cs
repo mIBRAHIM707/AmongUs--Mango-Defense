@@ -9,6 +9,8 @@ public class ShootProjectile : MonoBehaviour
     [SerializeField] private float baseSpeed;
     private GameObject currentProjectile;
 
+   
+
     void Start()
     {
         if (projectiles.Count > 0)
@@ -59,3 +61,5 @@ public class ShootProjectile : MonoBehaviour
         Destroy(projectile);
     }
 }
+
+

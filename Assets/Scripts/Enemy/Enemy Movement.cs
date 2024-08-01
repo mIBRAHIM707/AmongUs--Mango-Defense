@@ -14,6 +14,7 @@ public class EnemyMovement : MonoBehaviour
     [SerializeField] private Gradient colorGradient;
     [SerializeField] private PlayerMoneyManager playerMoneyManager;
     [SerializeField] private PlayerLivesManager playerLivesManager;
+   
 
     [SerializeField] private AudioClip deathSound;
     [SerializeField] private float soundVolume = 1.0f;
@@ -74,6 +75,7 @@ public class EnemyMovement : MonoBehaviour
             TakeDamage(damage);
             Destroy(collision.gameObject);
         }
+
     }
 
     private void UpdateHealthBar()
