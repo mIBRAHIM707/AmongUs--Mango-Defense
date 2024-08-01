@@ -151,7 +151,7 @@ MonoBehaviour:
   projectiles:
   - {fileID: 7845126297506283616, guid: 6aa774edd13aea44fb283888ad934e60, type: 3}
   - {fileID: 7845126297506283616, guid: dc11b3ad64a59024792a1f254266c873, type: 3}
-  speed: 1000
+  baseSpeed: 0
 --- !u!114 &4938993234074110002
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -461,6 +461,7 @@ MonoBehaviour:
   - {fileID: 8474940317221365504}
   - {fileID: 4219025952738603992}
   projectileCount: 3
+  maxSpeed: 10
 --- !u!1 &4219025952738603992
 GameObject:
   m_ObjectHideFlags: 0
@@ -564,7 +565,7 @@ MonoBehaviour:
   projectiles:
   - {fileID: 7845126297506283616, guid: 6aa774edd13aea44fb283888ad934e60, type: 3}
   - {fileID: 7845126297506283616, guid: dc11b3ad64a59024792a1f254266c873, type: 3}
-  speed: 1000
+  baseSpeed: 80
 --- !u!114 &3219552319022015912
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -593,7 +594,7 @@ MonoBehaviour:
   projectiles:
   - {fileID: 7845126297506283616, guid: 6aa774edd13aea44fb283888ad934e60, type: 3}
   - {fileID: 7845126297506283616, guid: dc11b3ad64a59024792a1f254266c873, type: 3}
-  speed: 1000
+  baseSpeed: 0
 --- !u!114 &2576028673674002260
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -708,7 +709,7 @@ MonoBehaviour:
   projectiles:
   - {fileID: 7845126297506283616, guid: 6aa774edd13aea44fb283888ad934e60, type: 3}
   - {fileID: 7845126297506283616, guid: dc11b3ad64a59024792a1f254266c873, type: 3}
-  speed: 1000
+  baseSpeed: 0
 --- !u!114 &330018603717110258
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -825,7 +826,7 @@ MonoBehaviour:
   projectiles:
   - {fileID: 7845126297506283616, guid: 6aa774edd13aea44fb283888ad934e60, type: 3}
   - {fileID: 7845126297506283616, guid: dc11b3ad64a59024792a1f254266c873, type: 3}
-  speed: 1000
+  baseSpeed: 80
 --- !u!114 &6901217746627534042
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -854,7 +855,7 @@ MonoBehaviour:
   projectiles:
   - {fileID: 7845126297506283616, guid: 6aa774edd13aea44fb283888ad934e60, type: 3}
   - {fileID: 7845126297506283616, guid: dc11b3ad64a59024792a1f254266c873, type: 3}
-  speed: 1000
+  baseSpeed: 0
 --- !u!114 &6739930136887255064
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -971,7 +972,7 @@ MonoBehaviour:
   projectiles:
   - {fileID: 7845126297506283616, guid: 6aa774edd13aea44fb283888ad934e60, type: 3}
   - {fileID: 7845126297506283616, guid: dc11b3ad64a59024792a1f254266c873, type: 3}
-  speed: 1000
+  baseSpeed: 80
 --- !u!114 &8683759051326071411
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1000,7 +1001,7 @@ MonoBehaviour:
   projectiles:
   - {fileID: 7845126297506283616, guid: 6aa774edd13aea44fb283888ad934e60, type: 3}
   - {fileID: 7845126297506283616, guid: dc11b3ad64a59024792a1f254266c873, type: 3}
-  speed: 1000
+  baseSpeed: 0
 --- !u!114 &8118337458226747579
 MonoBehaviour:
   m_ObjectHideFlags: 0

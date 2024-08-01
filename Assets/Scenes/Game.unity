@@ -3515,6 +3515,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Reticle 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7197134273222847067, guid: d7e6da52742876742876aeb775068784, type: 3}
+      propertyPath: baseSpeed
+      value: 80
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
