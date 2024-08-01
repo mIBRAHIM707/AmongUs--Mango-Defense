@@ -563,7 +563,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectiles:
-  - {fileID: 7845126297506283616, guid: 6aa774edd13aea44fb283888ad934e60, type: 3}
+  - {fileID: 7845126297506283616, guid: 72c879baf38be444c806ef7c0b98d32e, type: 3}
   - {fileID: 7845126297506283616, guid: dc11b3ad64a59024792a1f254266c873, type: 3}
   baseSpeed: 80
 --- !u!114 &3219552319022015912
@@ -824,7 +824,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectiles:
-  - {fileID: 7845126297506283616, guid: 6aa774edd13aea44fb283888ad934e60, type: 3}
+  - {fileID: 7845126297506283616, guid: 72c879baf38be444c806ef7c0b98d32e, type: 3}
   - {fileID: 7845126297506283616, guid: dc11b3ad64a59024792a1f254266c873, type: 3}
   baseSpeed: 80
 --- !u!114 &6901217746627534042
@@ -970,7 +970,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectiles:
-  - {fileID: 7845126297506283616, guid: 6aa774edd13aea44fb283888ad934e60, type: 3}
+  - {fileID: 7845126297506283616, guid: 72c879baf38be444c806ef7c0b98d32e, type: 3}
   - {fileID: 7845126297506283616, guid: dc11b3ad64a59024792a1f254266c873, type: 3}
   baseSpeed: 80
 --- !u!114 &8683759051326071411

@@ -40,7 +40,6 @@ public class EnemyMovement : MonoBehaviour
             playerMoneyManager = FindObjectOfType<PlayerMoneyManager>();
         }
 
-        // Get the EnemyBody component from the child GameObject
         enemyBody = GetComponentInChildren<PlaySound>();
         if (enemyBody == null)
         {
@@ -70,11 +69,12 @@ public class EnemyMovement : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Projectile"))
-        {
+        //if (collision.gameObject.CompareTag("Projectile"))
+        //{
+            Debug.Log("Triggered");
             TakeDamage(damage);
             Destroy(collision.gameObject);
-        }
+        //}
 
     }
 
@@ -107,7 +107,6 @@ public class EnemyMovement : MonoBehaviour
             {
                 UpdateHealthBar();
 
-                // Play hit sound on the enemy's body
                 if (enemyBody != null)
                 {
                     enemyBody.PlayHitSound();
@@ -120,7 +119,6 @@ public class EnemyMovement : MonoBehaviour
             {
                 AddMoney(_MoneyAmount);
 
-                // Play death sound
                 if (deathSound != null)
                 {
                     AudioSource.PlayClipAtPoint(deathSound, transform.position, soundVolume);

@@ -1471,6 +1471,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2736142295148923333, guid: 4334535edec22b649a23c206ac369e45, type: 3}
+      propertyPath: playerLivesManager
+      value: 
+      objectReference: {fileID: 95850949}
+    - target: {fileID: 2736142295148923333, guid: 4334535edec22b649a23c206ac369e45, type: 3}
+      propertyPath: playerMoneyManager
+      value: 
+      objectReference: {fileID: 560105815}
     - target: {fileID: 7121985785135816831, guid: 4334535edec22b649a23c206ac369e45, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.16
@@ -1651,6 +1659,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2736142295148923333, guid: 4334535edec22b649a23c206ac369e45, type: 3}
+      propertyPath: playerLivesManager
+      value: 
+      objectReference: {fileID: 95850949}
+    - target: {fileID: 2736142295148923333, guid: 4334535edec22b649a23c206ac369e45, type: 3}
+      propertyPath: playerMoneyManager
+      value: 
+      objectReference: {fileID: 560105815}
     - target: {fileID: 7121985785135816831, guid: 4334535edec22b649a23c206ac369e45, type: 3}
       propertyPath: m_LocalPosition.x
       value: -3.73
@@ -3965,7 +3981,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 518, y: 877}
+  m_AnchoredPosition: {x: 440, y: 877}
   m_SizeDelta: {x: 239.8, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1404987935
@@ -4165,6 +4181,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2736142295148923333, guid: 4334535edec22b649a23c206ac369e45, type: 3}
+      propertyPath: playerLivesManager
+      value: 
+      objectReference: {fileID: 95850949}
+    - target: {fileID: 2736142295148923333, guid: 4334535edec22b649a23c206ac369e45, type: 3}
+      propertyPath: playerMoneyManager
+      value: 
+      objectReference: {fileID: 560105815}
     - target: {fileID: 7121985785135816831, guid: 4334535edec22b649a23c206ac369e45, type: 3}
       propertyPath: m_LocalPosition.x
       value: -5.72
