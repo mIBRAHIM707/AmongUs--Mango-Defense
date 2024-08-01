@@ -14,7 +14,7 @@ public class EnemyMovement : MonoBehaviour
     [SerializeField] private Gradient colorGradient;
     [SerializeField] private PlayerMoneyManager playerMoneyManager;
     [SerializeField] private PlayerLivesManager playerLivesManager;
-    [SerializeField] public Bomb _bomb;
+   
 
     [SerializeField] private AudioClip deathSound;
     [SerializeField] private float soundVolume = 1.0f;
