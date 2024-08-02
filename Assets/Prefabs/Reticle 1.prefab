@@ -261,7 +261,7 @@ MonoBehaviour:
   projectiles:
   - {fileID: 7845126297506283616, guid: 6aa774edd13aea44fb283888ad934e60, type: 3}
   - {fileID: 7845126297506283616, guid: dc11b3ad64a59024792a1f254266c873, type: 3}
-  speed: 1000
+  baseSpeed: 0
 --- !u!114 &5480802523596272078
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -389,7 +389,7 @@ GameObject:
   - component: {fileID: 2800156094272366780}
   m_Layer: 0
   m_Name: Point
-  m_TagString: Untagged
+  m_TagString: Projectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -474,9 +474,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectiles:
-  - {fileID: 7845126297506283616, guid: 6aa774edd13aea44fb283888ad934e60, type: 3}
+  - {fileID: 7845126297506283616, guid: 72c879baf38be444c806ef7c0b98d32e, type: 3}
   - {fileID: 7845126297506283616, guid: dc11b3ad64a59024792a1f254266c873, type: 3}
-  speed: 1000
+  baseSpeed: 0
 --- !u!114 &7276653499182947338
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -505,7 +505,7 @@ MonoBehaviour:
   projectiles:
   - {fileID: 7845126297506283616, guid: 6aa774edd13aea44fb283888ad934e60, type: 3}
   - {fileID: 7845126297506283616, guid: dc11b3ad64a59024792a1f254266c873, type: 3}
-  speed: 1000
+  baseSpeed: 0
 --- !u!114 &2800156094272366780
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -604,6 +604,7 @@ MonoBehaviour:
   launchPoints:
   - {fileID: 5271039374754270022}
   projectileCount: 1
+  maxSpeed: 10
 --- !u!114 &1297296737254058308
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -652,6 +653,7 @@ MonoBehaviour:
   launchPoints:
   - {fileID: 5271039374754270022}
   projectileCount: 1
+  maxSpeed: 10
 --- !u!1 &6046214910696557419
 GameObject:
   m_ObjectHideFlags: 0
@@ -753,7 +755,7 @@ MonoBehaviour:
   projectiles:
   - {fileID: 7845126297506283616, guid: 6aa774edd13aea44fb283888ad934e60, type: 3}
   - {fileID: 7845126297506283616, guid: dc11b3ad64a59024792a1f254266c873, type: 3}
-  speed: 1000
+  baseSpeed: 0
 --- !u!114 &2419384888514969446
 MonoBehaviour:
   m_ObjectHideFlags: 0

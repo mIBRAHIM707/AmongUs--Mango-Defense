@@ -24,6 +24,7 @@ public class ReticleScript : MonoBehaviour
 
     [Header("Projectile Settings")]
     [SerializeField] private int projectileCount = 1; // Default to 1 projectile
+    [SerializeField] private float maxSpeed = 10f; // Maximum speed of the projectile
 
     private void Awake()
     {
@@ -141,6 +142,10 @@ public class ReticleScript : MonoBehaviour
 
     private void FireProjectiles()
     {
+        Vector3 mousePos = Input.mousePosition;
+        Vector3 mouseWorldPos = Camera.main.ScreenToWorldPoint(mousePos);
+        float pullDistance = Vector2.Distance(this.transform.position, mouseWorldPos);
+
         for (int i = 0; i < launchPoints.Count && i < projectileCount; i++)
         {
             if (launchPoints[i] != null)
@@ -148,7 +153,7 @@ public class ReticleScript : MonoBehaviour
                 ShootProjectile shooter = launchPoints[i].GetComponent<ShootProjectile>();
                 if (shooter != null)
                 {
-                    shooter.FireProjectile();
+                    shooter.FireProjectile(pullDistance / maxSpeed);
                 }
                 else
                 {

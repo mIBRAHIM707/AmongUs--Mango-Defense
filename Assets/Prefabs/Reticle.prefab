@@ -83,6 +83,8 @@ MonoBehaviour:
   - {fileID: 4220703882183334261}
   launchPoints:
   - {fileID: 3423509314491064501}
+  projectileCount: 1
+  maxSpeed: 10
 --- !u!1 &184813935007104561
 GameObject:
   m_ObjectHideFlags: 0
@@ -427,7 +429,7 @@ MonoBehaviour:
   projectiles:
   - {fileID: 7845126297506283616, guid: 6aa774edd13aea44fb283888ad934e60, type: 3}
   - {fileID: 7845126297506283616, guid: dc11b3ad64a59024792a1f254266c873, type: 3}
-  speed: 1000
+  baseSpeed: 80
 --- !u!114 &7627792072992863395
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -640,7 +642,7 @@ MonoBehaviour:
   projectiles:
   - {fileID: 7845126297506283616, guid: 6aa774edd13aea44fb283888ad934e60, type: 3}
   - {fileID: 7845126297506283616, guid: dc11b3ad64a59024792a1f254266c873, type: 3}
-  speed: 1000
+  baseSpeed: 0
 --- !u!114 &9128508555293246905
 MonoBehaviour:
   m_ObjectHideFlags: 0
