@@ -10,11 +10,13 @@ public class EnemyManager : MonoBehaviour
     {
         totalEnemies = FindObjectsOfType<EnemyMovement>().Length;
         remainingEnemies = totalEnemies;
+        Debug.Log(remainingEnemies);
     }
 
     public void OnEnemyDefeated()
     {
         remainingEnemies--;
+        Debug.Log(remainingEnemies);
         if (remainingEnemies <= 0)
         {
             levelManager.CompleteLevel();
