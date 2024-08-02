@@ -24,6 +24,7 @@ public class EnemyMovement : MonoBehaviour
     private int currentHealth;
     private Tween healthBarFillTween;
     private Tween healthBarColorTween;
+    private bool isDead = false;
 
     void Start()
     {
@@ -117,6 +118,8 @@ public class EnemyMovement : MonoBehaviour
 
             if (currentHealth <= 0)
             {
+                if(!isDead) FindObjectOfType<EnemyManager>().OnEnemyDefeated();
+                isDead = true;
                 AddMoney(_MoneyAmount);
 
                 if (deathSound != null)
@@ -125,7 +128,6 @@ public class EnemyMovement : MonoBehaviour
                 }
 
                 Destroy(gameObject);
-                FindObjectOfType<EnemyManager>().OnEnemyDefeated();
             }
         }
     }
