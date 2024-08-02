@@ -30,8 +30,11 @@ public class MangoTypeUpgrade : MonoBehaviour
     public void BuyTripleReticle()
     {
         int initial = playerMoneyManager.GetMoney();
-        playerMoneyManager.SetMoney(initial - 800);    
-        player.UnlockTripleReticle();
-        Debug.Log("Triple Reticle purchased!");
+        if(initial >= 800)
+        {
+            playerMoneyManager.SetMoney(initial - 800);
+            player.UnlockTripleReticle();
+            Debug.Log("Triple Reticle purchased!");
+        }
     }
 }

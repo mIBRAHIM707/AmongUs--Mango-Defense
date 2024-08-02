@@ -10,6 +10,7 @@ public class PlayerMoneyManager : MonoBehaviour
     {
         moneyText.text = "0";
         UpdateMoneyUI(GetMoney());
+        SetMoney(1000);
     }
 
     public void SetMoney(int amount)
