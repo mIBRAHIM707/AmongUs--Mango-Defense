@@ -2,6 +2,7 @@ using TMPro;
 using DG.Tweening;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Events;
 
 public class EnemyMovement : MonoBehaviour
 {
@@ -26,6 +27,8 @@ public class EnemyMovement : MonoBehaviour
     private Tween healthBarColorTween;
     private bool isDead = false;
 
+
+    public UnityEvent OnDied;
     void Start()
     {
         currentHealth = maxHealth;
@@ -118,6 +121,8 @@ public class EnemyMovement : MonoBehaviour
 
             if (currentHealth <= 0)
             {
+               
+
                 if(!isDead) FindObjectOfType<EnemyManager>().OnEnemyDefeated();
                 isDead = true;
                 AddMoney(_MoneyAmount);
@@ -126,8 +131,8 @@ public class EnemyMovement : MonoBehaviour
                 {
                     AudioSource.PlayClipAtPoint(deathSound, transform.position, soundVolume);
                 }
-
-                Destroy(gameObject);
+                OnDied.Invoke();  //FOR ANIMATION
+                Destroy(gameObject, 1f);
             }
         }
     }
