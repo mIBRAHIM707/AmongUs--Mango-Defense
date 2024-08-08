@@ -1159,6 +1159,14 @@ PrefabInstance:
       value: BatEnemy
       objectReference: {fileID: 0}
     - target: {fileID: 4806874102440494723, guid: 589d775c2fd69f948ba764a84f01135f, type: 3}
+      propertyPath: castlerHit
+      value: 
+      objectReference: {fileID: 8300000, guid: 121bf03e21863ce4ba9b7d034fdbb539, type: 3}
+    - target: {fileID: 4806874102440494723, guid: 589d775c2fd69f948ba764a84f01135f, type: 3}
+      propertyPath: deathSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 530657f44dc13cf4aa35285f6024708f, type: 3}
+    - target: {fileID: 4806874102440494723, guid: 589d775c2fd69f948ba764a84f01135f, type: 3}
       propertyPath: explosionShakeData
       value: 
       objectReference: {fileID: 11400000, guid: b787135ef733f8a468d07adb05504265, type: 2}
@@ -2492,6 +2500,14 @@ PrefabInstance:
       value: REDen (4)
       objectReference: {fileID: 0}
     - target: {fileID: 6768899397134075380, guid: 84405b66e2b404e42a390d8d3dc16b8e, type: 3}
+      propertyPath: castlerHit
+      value: 
+      objectReference: {fileID: 8300000, guid: 121bf03e21863ce4ba9b7d034fdbb539, type: 3}
+    - target: {fileID: 6768899397134075380, guid: 84405b66e2b404e42a390d8d3dc16b8e, type: 3}
+      propertyPath: deathSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 530657f44dc13cf4aa35285f6024708f, type: 3}
+    - target: {fileID: 6768899397134075380, guid: 84405b66e2b404e42a390d8d3dc16b8e, type: 3}
       propertyPath: explosionShakeData
       value: 
       objectReference: {fileID: 11400000, guid: b787135ef733f8a468d07adb05504265, type: 2}
@@ -2864,7 +2880,6 @@ MonoBehaviour:
   lives: 1
   gameOverPanel: {fileID: 1317618007}
   livesText: {fileID: 389263107}
-  gameOverDelay: 1
 --- !u!4 &791795317
 Transform:
   m_ObjectHideFlags: 0
@@ -4135,6 +4150,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1662754628963287772, guid: 774c625d425db6e4fb00509889c5de26, type: 3}
+      propertyPath: castlerHit
+      value: 
+      objectReference: {fileID: 8300000, guid: 121bf03e21863ce4ba9b7d034fdbb539, type: 3}
+    - target: {fileID: 1662754628963287772, guid: 774c625d425db6e4fb00509889c5de26, type: 3}
+      propertyPath: deathSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 530657f44dc13cf4aa35285f6024708f, type: 3}
     - target: {fileID: 1662754628963287772, guid: 774c625d425db6e4fb00509889c5de26, type: 3}
       propertyPath: explosionShakeData
       value: 
@@ -5500,6 +5523,14 @@ PrefabInstance:
       value: REDen (3)
       objectReference: {fileID: 0}
     - target: {fileID: 6768899397134075380, guid: 84405b66e2b404e42a390d8d3dc16b8e, type: 3}
+      propertyPath: castlerHit
+      value: 
+      objectReference: {fileID: 8300000, guid: 121bf03e21863ce4ba9b7d034fdbb539, type: 3}
+    - target: {fileID: 6768899397134075380, guid: 84405b66e2b404e42a390d8d3dc16b8e, type: 3}
+      propertyPath: deathSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 530657f44dc13cf4aa35285f6024708f, type: 3}
+    - target: {fileID: 6768899397134075380, guid: 84405b66e2b404e42a390d8d3dc16b8e, type: 3}
       propertyPath: explosionShakeData
       value: 
       objectReference: {fileID: 11400000, guid: b787135ef733f8a468d07adb05504265, type: 2}
@@ -6304,6 +6335,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelManager: {fileID: 1726543619}
+  healthBarFill: {fileID: 0}
+  enemiesLeftText: {fileID: 0}
 --- !u!4 &1914403412
 Transform:
   m_ObjectHideFlags: 0
@@ -6424,6 +6457,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: FreakyEnemy
       objectReference: {fileID: 0}
+    - target: {fileID: 6947320247972352202, guid: 8c51998e0b70d034894add117f43c169, type: 3}
+      propertyPath: castlerHit
+      value: 
+      objectReference: {fileID: 8300000, guid: 121bf03e21863ce4ba9b7d034fdbb539, type: 3}
     - target: {fileID: 6947320247972352202, guid: 8c51998e0b70d034894add117f43c169, type: 3}
       propertyPath: deathSound
       value: 

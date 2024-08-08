@@ -3469,6 +3469,14 @@ PrefabInstance:
       value: REDen (5)
       objectReference: {fileID: 0}
     - target: {fileID: 6768899397134075380, guid: 84405b66e2b404e42a390d8d3dc16b8e, type: 3}
+      propertyPath: castlerHit
+      value: 
+      objectReference: {fileID: 8300000, guid: 121bf03e21863ce4ba9b7d034fdbb539, type: 3}
+    - target: {fileID: 6768899397134075380, guid: 84405b66e2b404e42a390d8d3dc16b8e, type: 3}
+      propertyPath: deathSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 530657f44dc13cf4aa35285f6024708f, type: 3}
+    - target: {fileID: 6768899397134075380, guid: 84405b66e2b404e42a390d8d3dc16b8e, type: 3}
       propertyPath: explosionShakeData
       value: 
       objectReference: {fileID: 11400000, guid: b787135ef733f8a468d07adb05504265, type: 2}
@@ -3486,7 +3494,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8847225020076501485, guid: 84405b66e2b404e42a390d8d3dc16b8e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.45
+      value: -1.1
       objectReference: {fileID: 0}
     - target: {fileID: 8847225020076501485, guid: 84405b66e2b404e42a390d8d3dc16b8e, type: 3}
       propertyPath: m_LocalPosition.z
@@ -4334,7 +4342,6 @@ MonoBehaviour:
   lives: 3
   gameOverPanel: {fileID: 1218774175}
   livesText: {fileID: 715159757}
-  gameOverDelay: 1
 --- !u!4 &1281316080
 Transform:
   m_ObjectHideFlags: 0
@@ -4784,6 +4791,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelManager: {fileID: 2042351833}
+  healthBarFill: {fileID: 0}
+  enemiesLeftText: {fileID: 0}
 --- !u!4 &1377564334
 Transform:
   m_ObjectHideFlags: 0
@@ -5558,6 +5567,14 @@ PrefabInstance:
       value: 0.15
       objectReference: {fileID: 0}
     - target: {fileID: 6768899397134075380, guid: 84405b66e2b404e42a390d8d3dc16b8e, type: 3}
+      propertyPath: castlerHit
+      value: 
+      objectReference: {fileID: 8300000, guid: 121bf03e21863ce4ba9b7d034fdbb539, type: 3}
+    - target: {fileID: 6768899397134075380, guid: 84405b66e2b404e42a390d8d3dc16b8e, type: 3}
+      propertyPath: deathSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 530657f44dc13cf4aa35285f6024708f, type: 3}
+    - target: {fileID: 6768899397134075380, guid: 84405b66e2b404e42a390d8d3dc16b8e, type: 3}
       propertyPath: explosionShakeData
       value: 
       objectReference: {fileID: 11400000, guid: b787135ef733f8a468d07adb05504265, type: 2}
@@ -5575,7 +5592,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8847225020076501485, guid: 84405b66e2b404e42a390d8d3dc16b8e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -7.6
+      value: -0.03
       objectReference: {fileID: 0}
     - target: {fileID: 8847225020076501485, guid: 84405b66e2b404e42a390d8d3dc16b8e, type: 3}
       propertyPath: m_LocalPosition.z
@@ -6489,6 +6506,14 @@ PrefabInstance:
       value: REDen (4)
       objectReference: {fileID: 0}
     - target: {fileID: 6768899397134075380, guid: 84405b66e2b404e42a390d8d3dc16b8e, type: 3}
+      propertyPath: castlerHit
+      value: 
+      objectReference: {fileID: 8300000, guid: 121bf03e21863ce4ba9b7d034fdbb539, type: 3}
+    - target: {fileID: 6768899397134075380, guid: 84405b66e2b404e42a390d8d3dc16b8e, type: 3}
+      propertyPath: deathSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 530657f44dc13cf4aa35285f6024708f, type: 3}
+    - target: {fileID: 6768899397134075380, guid: 84405b66e2b404e42a390d8d3dc16b8e, type: 3}
       propertyPath: explosionShakeData
       value: 
       objectReference: {fileID: 11400000, guid: b787135ef733f8a468d07adb05504265, type: 2}
@@ -6506,7 +6531,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8847225020076501485, guid: 84405b66e2b404e42a390d8d3dc16b8e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.78
+      value: -0.86
       objectReference: {fileID: 0}
     - target: {fileID: 8847225020076501485, guid: 84405b66e2b404e42a390d8d3dc16b8e, type: 3}
       propertyPath: m_LocalPosition.z

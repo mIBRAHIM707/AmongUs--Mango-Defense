@@ -443,6 +443,14 @@ PrefabInstance:
       value: BatEnemy
       objectReference: {fileID: 0}
     - target: {fileID: 4806874102440494723, guid: 589d775c2fd69f948ba764a84f01135f, type: 3}
+      propertyPath: castlerHit
+      value: 
+      objectReference: {fileID: 8300000, guid: 121bf03e21863ce4ba9b7d034fdbb539, type: 3}
+    - target: {fileID: 4806874102440494723, guid: 589d775c2fd69f948ba764a84f01135f, type: 3}
+      propertyPath: deathSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 530657f44dc13cf4aa35285f6024708f, type: 3}
+    - target: {fileID: 4806874102440494723, guid: 589d775c2fd69f948ba764a84f01135f, type: 3}
       propertyPath: explosionShakeData
       value: 
       objectReference: {fileID: 11400000, guid: b787135ef733f8a468d07adb05504265, type: 2}
@@ -989,7 +997,6 @@ MonoBehaviour:
   lives: 1
   gameOverPanel: {fileID: 1879886512}
   livesText: {fileID: 375965091}
-  gameOverDelay: 1
 --- !u!4 &301459966
 Transform:
   m_ObjectHideFlags: 0
@@ -1846,6 +1853,14 @@ PrefabInstance:
       value: BatEnemy (1)
       objectReference: {fileID: 0}
     - target: {fileID: 4806874102440494723, guid: 589d775c2fd69f948ba764a84f01135f, type: 3}
+      propertyPath: castlerHit
+      value: 
+      objectReference: {fileID: 8300000, guid: 121bf03e21863ce4ba9b7d034fdbb539, type: 3}
+    - target: {fileID: 4806874102440494723, guid: 589d775c2fd69f948ba764a84f01135f, type: 3}
+      propertyPath: deathSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 530657f44dc13cf4aa35285f6024708f, type: 3}
+    - target: {fileID: 4806874102440494723, guid: 589d775c2fd69f948ba764a84f01135f, type: 3}
       propertyPath: explosionShakeData
       value: 
       objectReference: {fileID: 11400000, guid: b787135ef733f8a468d07adb05504265, type: 2}
@@ -2677,6 +2692,14 @@ PrefabInstance:
       value: REDen (3)
       objectReference: {fileID: 0}
     - target: {fileID: 6768899397134075380, guid: 84405b66e2b404e42a390d8d3dc16b8e, type: 3}
+      propertyPath: castlerHit
+      value: 
+      objectReference: {fileID: 8300000, guid: 121bf03e21863ce4ba9b7d034fdbb539, type: 3}
+    - target: {fileID: 6768899397134075380, guid: 84405b66e2b404e42a390d8d3dc16b8e, type: 3}
+      propertyPath: deathSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 530657f44dc13cf4aa35285f6024708f, type: 3}
+    - target: {fileID: 6768899397134075380, guid: 84405b66e2b404e42a390d8d3dc16b8e, type: 3}
       propertyPath: explosionShakeData
       value: 
       objectReference: {fileID: 11400000, guid: b787135ef733f8a468d07adb05504265, type: 2}
@@ -2774,6 +2797,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelManager: {fileID: 904197279}
+  healthBarFill: {fileID: 0}
+  enemiesLeftText: {fileID: 0}
 --- !u!4 &866067011
 Transform:
   m_ObjectHideFlags: 0

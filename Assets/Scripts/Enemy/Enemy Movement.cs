@@ -19,9 +19,13 @@ public class EnemyMovement : MonoBehaviour
     [SerializeField] private Gradient colorGradient;
     [SerializeField] private PlayerMoneyManager playerMoneyManager;
     [SerializeField] private PlayerLivesManager playerLivesManager;
-    [SerializeField] private GameObject particleManager;
+    //[SerializeField] private GameObject particleManager;
+    //[SerializeField] private GameObject particleManager;
     [SerializeField] private AudioClip deathSound;
     [SerializeField] private float soundVolume = 1.0f;
+    [SerializeField] private AudioClip castlerHit;
+
+
 
     private PlaySound enemyBody;
     private int _MoneyAmount = 50;
@@ -37,7 +41,7 @@ public class EnemyMovement : MonoBehaviour
     public UnityEvent OnDied;
     void Start()
     {
-        walkingParticleManager = particleManager.GetComponent<ParticleManager>();
+        //walkingParticleManager = particleManager.GetComponent<ParticleManager>();
         lastPosition = transform.position;
         currentHealth = maxHealth;
         UpdateHealthBar();
@@ -66,7 +70,7 @@ public class EnemyMovement : MonoBehaviour
             if (!isWalking)
             {
                 isWalking = true;
-                walkingParticleManager.StartWalkingParticles();
+                //walkingParticleManager.StartWalkingParticles();
             }
         }
         else
@@ -74,7 +78,7 @@ public class EnemyMovement : MonoBehaviour
             if (isWalking)
             {
                 isWalking = false;
-                walkingParticleManager.StopWalkingParticles();
+                //walkingParticleManager.StopWalkingParticles();
             }
         }
 
@@ -84,6 +88,7 @@ public class EnemyMovement : MonoBehaviour
 
         if (transform.position.y < -8.81)
         {
+            AudioSource.PlayClipAtPoint(castlerHit, transform.position, soundVolume);
             CameraShakerHandler.Shake(explosionShakeData);
             Destroy(gameObject);
 
