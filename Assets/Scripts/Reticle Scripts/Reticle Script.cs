@@ -11,6 +11,7 @@ public class ReticleScript : MonoBehaviour
 
     [Header("Drag Settings")]
     [SerializeField] private float amplitude;
+    [SerializeField] private float pullThreshold;
 
     [Header("Spring")]
     [SerializeField] private float stiffness;
@@ -23,8 +24,10 @@ public class ReticleScript : MonoBehaviour
     private GameObject selectedObject;
 
     [Header("Projectile Settings")]
-    [SerializeField] private int projectileCount = 1; // Default to 1 projectile
-    [SerializeField] private float maxSpeed = 10f; // Maximum speed of the projectile
+    [SerializeField] private int projectileCount = 1; 
+    [SerializeField] private float maxSpeed = 10f; 
+
+    private bool isPulled = false; 
 
     private void Awake()
     {
@@ -45,8 +48,26 @@ public class ReticleScript : MonoBehaviour
     {
         if (selectedObject != null)
         {
-            StopAllCoroutines();
-            Selected(selectedObject);
+            if (Input.GetMouseButtonDown(0))
+            {
+                isPulled = true; 
+            }
+
+            if (Input.GetMouseButton(0)) 
+            {
+                StopAllCoroutines();
+                Selected(selectedObject);
+            }
+
+            if (Input.GetMouseButtonUp(0)) 
+            {
+                if (isPulled)
+                {
+                    FireProjectiles(); 
+                }
+                Deselect();
+                isPulled = false; 
+            }
         }
     }
 
@@ -144,25 +165,29 @@ public class ReticleScript : MonoBehaviour
     {
         Vector3 mousePos = Input.mousePosition;
         Vector3 mouseWorldPos = Camera.main.ScreenToWorldPoint(mousePos);
+        mouseWorldPos.z = 0; 
         float pullDistance = Vector2.Distance(this.transform.position, mouseWorldPos);
 
-        for (int i = 0; i < launchPoints.Count && i < projectileCount; i++)
+        if (pullDistance >= pullThreshold)
         {
-            if (launchPoints[i] != null)
+            for (int i = 0; i < launchPoints.Count && i < projectileCount; i++)
             {
-                ShootProjectile shooter = launchPoints[i].GetComponent<ShootProjectile>();
-                if (shooter != null)
+                if (launchPoints[i] != null)
                 {
-                    shooter.FireProjectile(pullDistance / maxSpeed);
+                    ShootProjectile shooter = launchPoints[i].GetComponent<ShootProjectile>();
+                    if (shooter != null)
+                    {
+                        shooter.FireProjectile(pullDistance / maxSpeed);
+                    }
+                    else
+                    {
+                        Debug.LogWarning($"ShootProjectile component not found on launch point at index {i}.");
+                    }
                 }
                 else
                 {
-                    Debug.LogWarning($"ShootProjectile component not found on launch point at index {i}.");
+                    Debug.LogWarning($"Launch point GameObject at index {i} is null.");
                 }
-            }
-            else
-            {
-                Debug.LogWarning($"Launch point GameObject at index {i} is null.");
             }
         }
         this.gameObject.SetActive(false);
