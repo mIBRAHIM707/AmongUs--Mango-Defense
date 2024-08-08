@@ -3,9 +3,13 @@ using DG.Tweening;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Events;
+using FirstGearGames.SmoothCameraShaker;
 
 public class EnemyMovement : MonoBehaviour
 {
+
+    public ShakeData explosionShakeData;
+
     [SerializeField] private float speed;
     [SerializeField] private Image healthBar;
     [SerializeField] public int damage;
@@ -18,6 +22,9 @@ public class EnemyMovement : MonoBehaviour
     [SerializeField] private GameObject vignette;
     [SerializeField] private AudioClip deathSound;
     [SerializeField] private float soundVolume = 1.0f;
+    [SerializeField] private AudioClip castlerHit;
+
+
 
 
     private PlaySound enemyBody;
@@ -64,6 +71,8 @@ public class EnemyMovement : MonoBehaviour
 
         if (transform.position.y < -8.81)
         {
+            AudioSource.PlayClipAtPoint(castlerHit, transform.position, soundVolume);
+            CameraShakerHandler.Shake(explosionShakeData);
             Destroy(gameObject);
             vignette.SetActive(false);
 

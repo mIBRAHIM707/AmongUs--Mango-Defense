@@ -1,5 +1,6 @@
 using UnityEngine;
 using TMPro;
+using System.Collections;
 
 public class PlayerLivesManager : MonoBehaviour
 {
@@ -44,7 +45,7 @@ public class PlayerLivesManager : MonoBehaviour
             Debug.LogWarning("GameOverPanel not assigned.");
         }
 
-        
+
         Time.timeScale = 0f; // This will pause the game
     }
 
@@ -52,4 +53,6 @@ public class PlayerLivesManager : MonoBehaviour
     {
         return lives;
     }
+
+
 }
