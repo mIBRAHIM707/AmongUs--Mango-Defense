@@ -18,7 +18,13 @@ public class MangoTypeUpgrade : MonoBehaviour
     {
         if (shootProjectileScript != null)
         {
-            shootProjectileScript.SwitchProjectile(1);
+            int initial = playerMoneyManager.GetMoney();
+            if (initial >= 300)
+            {
+                playerMoneyManager.SetMoney(initial - 300);
+                shootProjectileScript.SwitchProjectile(1);
+                Debug.Log("Chaunsa purchased!");
+            }
         }
         else
         {
@@ -35,6 +41,16 @@ public class MangoTypeUpgrade : MonoBehaviour
             playerMoneyManager.SetMoney(initial - 800);
             player.UnlockTripleReticle();
             Debug.Log("Triple Reticle purchased!");
+        }
+    }
+
+    public void BuyUpgrade2()
+    {
+        int initial = playerMoneyManager.GetMoney();
+        if (initial >= 300)
+        {
+            playerMoneyManager.SetMoney(initial - 300);
+            Debug.Log("Chaunsa purchased!");
         }
     }
 }
