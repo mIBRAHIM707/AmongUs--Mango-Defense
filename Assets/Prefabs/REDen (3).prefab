@@ -188,6 +188,7 @@ MonoBehaviour:
     m_NumAlphaKeys: 2
   playerMoneyManager: {fileID: 0}
   playerLivesManager: {fileID: 0}
+  vignette: {fileID: 3229279836800517120, guid: 9474d7a39cd3e804abed98f201edc07e, type: 3}
   deathSound: {fileID: 8300000, guid: bf9e1a40722112f4bbe52835b35c6f30, type: 3}
   soundVolume: 1
   OnDied:
