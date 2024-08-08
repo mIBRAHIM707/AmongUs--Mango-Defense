@@ -15,9 +15,10 @@ public class EnemyMovement : MonoBehaviour
     [SerializeField] private Gradient colorGradient;
     [SerializeField] private PlayerMoneyManager playerMoneyManager;
     [SerializeField] private PlayerLivesManager playerLivesManager;
-    [SerializeField] private GameObject particleManager;
+    [SerializeField] private GameObject vignette;
     [SerializeField] private AudioClip deathSound;
     [SerializeField] private float soundVolume = 1.0f;
+
 
     private PlaySound enemyBody;
     private int _MoneyAmount = 50;
@@ -25,16 +26,11 @@ public class EnemyMovement : MonoBehaviour
     private Tween healthBarFillTween;
     private Tween healthBarColorTween;
     private bool isDead = false;
-    private Vector3 lastPosition;
-    private bool isWalking = false;
-    private ParticleManager walkingParticleManager;
 
 
     public UnityEvent OnDied;
     void Start()
     {
-        walkingParticleManager = particleManager.GetComponent<ParticleManager>();
-        lastPosition = transform.position;
         currentHealth = maxHealth;
         UpdateHealthBar();
 
@@ -57,30 +53,19 @@ public class EnemyMovement : MonoBehaviour
 
     void Update()
     {
-        if (Vector3.Distance(lastPosition, transform.position) > 0.1f)
-        {
-            if (!isWalking)
-            {
-                isWalking = true;
-                walkingParticleManager.StartWalkingParticles();
-            }
-        }
-        else
-        {
-            if (isWalking)
-            {
-                isWalking = false;
-                walkingParticleManager.StopWalkingParticles();
-            }
-        }
-
-        lastPosition = transform.position;
 
         transform.position += Vector3.down * speed * Time.deltaTime;
+
+        if(transform.position.y < -7.8)
+        {
+            vignette.SetActive(true);
+            Debug.Log("VIGNETTE TRUE");
+        }
 
         if (transform.position.y < -8.81)
         {
             Destroy(gameObject);
+            vignette.SetActive(false);
 
             if (playerLivesManager != null)
             {
