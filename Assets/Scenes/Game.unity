@@ -1237,10 +1237,7 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 645892064}
-  - {fileID: 2140210089}
-  - {fileID: 1276757063}
+  m_Children: []
   m_Father: {fileID: 959927790}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -3624,16 +3621,13 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 440928362}
     - target: {fileID: 6768899397134075380, guid: 84405b66e2b404e42a390d8d3dc16b8e, type: 3}
-      propertyPath: particleManager
-      value: 
-      objectReference: {fileID: 0}
-      propertyPath: castlerHit
-      value: 
-      objectReference: {fileID: 8300000, guid: 121bf03e21863ce4ba9b7d034fdbb539, type: 3}
-    - target: {fileID: 6768899397134075380, guid: 84405b66e2b404e42a390d8d3dc16b8e, type: 3}
       propertyPath: deathSound
       value: 
       objectReference: {fileID: 8300000, guid: 530657f44dc13cf4aa35285f6024708f, type: 3}
+    - target: {fileID: 6768899397134075380, guid: 84405b66e2b404e42a390d8d3dc16b8e, type: 3}
+      propertyPath: particleManager
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 6768899397134075380, guid: 84405b66e2b404e42a390d8d3dc16b8e, type: 3}
       propertyPath: explosionShakeData
       value: 
@@ -5721,16 +5715,13 @@ PrefabInstance:
       value: REDen (3)
       objectReference: {fileID: 0}
     - target: {fileID: 6768899397134075380, guid: 84405b66e2b404e42a390d8d3dc16b8e, type: 3}
-      propertyPath: vignette
-      value: 
-      objectReference: {fileID: 440928362}
-    - target: {fileID: 6768899397134075380, guid: 84405b66e2b404e42a390d8d3dc16b8e, type: 3}
-      propertyPath: particleManager
-      value: 
-      objectReference: {fileID: 0}
       propertyPath: speed
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 6768899397134075380, guid: 84405b66e2b404e42a390d8d3dc16b8e, type: 3}
+      propertyPath: vignette
+      value: 
+      objectReference: {fileID: 440928362}
     - target: {fileID: 6768899397134075380, guid: 84405b66e2b404e42a390d8d3dc16b8e, type: 3}
       propertyPath: castlerHit
       value: 
@@ -5739,6 +5730,10 @@ PrefabInstance:
       propertyPath: deathSound
       value: 
       objectReference: {fileID: 8300000, guid: 530657f44dc13cf4aa35285f6024708f, type: 3}
+    - target: {fileID: 6768899397134075380, guid: 84405b66e2b404e42a390d8d3dc16b8e, type: 3}
+      propertyPath: particleManager
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 6768899397134075380, guid: 84405b66e2b404e42a390d8d3dc16b8e, type: 3}
       propertyPath: explosionShakeData
       value: 
@@ -6675,16 +6670,13 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 440928362}
     - target: {fileID: 6768899397134075380, guid: 84405b66e2b404e42a390d8d3dc16b8e, type: 3}
-      propertyPath: particleManager
-      value: 
-      objectReference: {fileID: 0}
-      propertyPath: castlerHit
-      value: 
-      objectReference: {fileID: 8300000, guid: 121bf03e21863ce4ba9b7d034fdbb539, type: 3}
-    - target: {fileID: 6768899397134075380, guid: 84405b66e2b404e42a390d8d3dc16b8e, type: 3}
       propertyPath: deathSound
       value: 
       objectReference: {fileID: 8300000, guid: 530657f44dc13cf4aa35285f6024708f, type: 3}
+    - target: {fileID: 6768899397134075380, guid: 84405b66e2b404e42a390d8d3dc16b8e, type: 3}
+      propertyPath: particleManager
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 6768899397134075380, guid: 84405b66e2b404e42a390d8d3dc16b8e, type: 3}
       propertyPath: explosionShakeData
       value: 
