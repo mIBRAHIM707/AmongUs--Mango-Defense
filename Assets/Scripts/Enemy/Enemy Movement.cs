@@ -3,9 +3,13 @@ using DG.Tweening;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Events;
+using FirstGearGames.SmoothCameraShaker;
 
 public class EnemyMovement : MonoBehaviour
 {
+
+    public ShakeData explosionShakeData;
+
     [SerializeField] private float speed;
     [SerializeField] private Image healthBar;
     [SerializeField] public int damage;
@@ -57,6 +61,7 @@ public class EnemyMovement : MonoBehaviour
 
         if (transform.position.y < -8.81)
         {
+            CameraShakerHandler.Shake(explosionShakeData);
             Destroy(gameObject);
 
             if (playerLivesManager != null)

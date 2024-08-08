@@ -443,6 +443,10 @@ PrefabInstance:
       value: BatEnemy
       objectReference: {fileID: 0}
     - target: {fileID: 4806874102440494723, guid: 589d775c2fd69f948ba764a84f01135f, type: 3}
+      propertyPath: explosionShakeData
+      value: 
+      objectReference: {fileID: 11400000, guid: b787135ef733f8a468d07adb05504265, type: 2}
+    - target: {fileID: 4806874102440494723, guid: 589d775c2fd69f948ba764a84f01135f, type: 3}
       propertyPath: playerLivesManager
       value: 
       objectReference: {fileID: 301459965}
@@ -985,6 +989,7 @@ MonoBehaviour:
   lives: 1
   gameOverPanel: {fileID: 1879886512}
   livesText: {fileID: 375965091}
+  gameOverDelay: 1
 --- !u!4 &301459966
 Transform:
   m_ObjectHideFlags: 0
@@ -1694,7 +1699,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &474309970
 Transform:
   m_ObjectHideFlags: 0
@@ -1840,6 +1845,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BatEnemy (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 4806874102440494723, guid: 589d775c2fd69f948ba764a84f01135f, type: 3}
+      propertyPath: explosionShakeData
+      value: 
+      objectReference: {fileID: 11400000, guid: b787135ef733f8a468d07adb05504265, type: 2}
     - target: {fileID: 4806874102440494723, guid: 589d775c2fd69f948ba764a84f01135f, type: 3}
       propertyPath: playerLivesManager
       value: 
@@ -2667,6 +2676,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: REDen (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 6768899397134075380, guid: 84405b66e2b404e42a390d8d3dc16b8e, type: 3}
+      propertyPath: explosionShakeData
+      value: 
+      objectReference: {fileID: 11400000, guid: b787135ef733f8a468d07adb05504265, type: 2}
     - target: {fileID: 6768899397134075380, guid: 84405b66e2b404e42a390d8d3dc16b8e, type: 3}
       propertyPath: playerLivesManager
       value: 
@@ -4947,6 +4960,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: REDen (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 6768899397134075380, guid: 84405b66e2b404e42a390d8d3dc16b8e, type: 3}
+      propertyPath: explosionShakeData
+      value: 
+      objectReference: {fileID: 11400000, guid: b787135ef733f8a468d07adb05504265, type: 2}
     - target: {fileID: 6768899397134075380, guid: 84405b66e2b404e42a390d8d3dc16b8e, type: 3}
       propertyPath: playerLivesManager
       value: 

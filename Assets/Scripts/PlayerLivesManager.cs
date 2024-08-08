@@ -1,11 +1,13 @@
 using UnityEngine;
 using TMPro;
+using System.Collections;
 
 public class PlayerLivesManager : MonoBehaviour
 {
     [SerializeField] private int lives = 3;
     [SerializeField] private GameObject gameOverPanel;
     public TextMeshProUGUI livesText;
+    public float gameOverDelay = 1f; // Time in seconds before showing the game over panel
 
     private void Start()
     {
@@ -20,7 +22,7 @@ public class PlayerLivesManager : MonoBehaviour
 
         if (lives <= 0)
         {
-            GameOver();
+            StartCoroutine(GameOverAfterDelay());
         }
     }
 
@@ -32,9 +34,10 @@ public class PlayerLivesManager : MonoBehaviour
         }
     }
 
-    private void GameOver()
+    private IEnumerator GameOverAfterDelay()
     {
         Debug.Log("Game Over!");
+        yield return new WaitForSeconds(gameOverDelay);
         if (gameOverPanel != null)
         {
             gameOverPanel.SetActive(true);
@@ -44,7 +47,6 @@ public class PlayerLivesManager : MonoBehaviour
             Debug.LogWarning("GameOverPanel not assigned.");
         }
 
-        
         Time.timeScale = 0f; // This will pause the game
     }
 
