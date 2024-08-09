@@ -466,6 +466,10 @@ PrefabInstance:
       propertyPath: playerMoneyManager
       value: 
       objectReference: {fileID: 255493767}
+    - target: {fileID: 4806874102440494723, guid: 589d775c2fd69f948ba764a84f01135f, type: 3}
+      propertyPath: OnDied.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -998,7 +1002,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08183e1037c7bd345992291d27b55352, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lives: 1
+  lives: 3
   gameOverPanel: {fileID: 1879886512}
   livesText: {fileID: 375965091}
 --- !u!4 &301459966
@@ -1857,6 +1861,10 @@ PrefabInstance:
       value: BatEnemy (1)
       objectReference: {fileID: 0}
     - target: {fileID: 4806874102440494723, guid: 589d775c2fd69f948ba764a84f01135f, type: 3}
+      propertyPath: vignette
+      value: 
+      objectReference: {fileID: 753708742}
+    - target: {fileID: 4806874102440494723, guid: 589d775c2fd69f948ba764a84f01135f, type: 3}
       propertyPath: castlerHit
       value: 
       objectReference: {fileID: 8300000, guid: 121bf03e21863ce4ba9b7d034fdbb539, type: 3}
@@ -1876,6 +1884,10 @@ PrefabInstance:
       propertyPath: playerMoneyManager
       value: 
       objectReference: {fileID: 255493767}
+    - target: {fileID: 4806874102440494723, guid: 589d775c2fd69f948ba764a84f01135f, type: 3}
+      propertyPath: OnDied.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2845,6 +2857,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: REDen (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 6768899397134075380, guid: 84405b66e2b404e42a390d8d3dc16b8e, type: 3}
+      propertyPath: vignette
+      value: 
+      objectReference: {fileID: 753708742}
     - target: {fileID: 6768899397134075380, guid: 84405b66e2b404e42a390d8d3dc16b8e, type: 3}
       propertyPath: castlerHit
       value: 
@@ -4766,6 +4782,7 @@ GameObject:
   - component: {fileID: 1533911929}
   - component: {fileID: 1533911928}
   - component: {fileID: 1533911927}
+  - component: {fileID: 1533911930}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -4847,6 +4864,22 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1533911930
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1533911926}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9747a7528e095340a06de1daaaa09a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  duration: 0.5
+  strength: 0.3
+  vibrato: 10
+  randomness: 90
 --- !u!1 &1549925624
 GameObject:
   m_ObjectHideFlags: 0
@@ -5251,6 +5284,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: REDen (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 6768899397134075380, guid: 84405b66e2b404e42a390d8d3dc16b8e, type: 3}
+      propertyPath: vignette
+      value: 
+      objectReference: {fileID: 753708742}
     - target: {fileID: 6768899397134075380, guid: 84405b66e2b404e42a390d8d3dc16b8e, type: 3}
       propertyPath: explosionShakeData
       value: 

@@ -8,7 +8,7 @@ using FirstGearGames.SmoothCameraShaker;
 public class EnemyMovement : MonoBehaviour
 {
 
-    public ShakeData explosionShakeData;
+    //public ShakeData explosionShakeData;
 
     [SerializeField] private float speed;
     [SerializeField] private Image healthBar;
@@ -25,8 +25,7 @@ public class EnemyMovement : MonoBehaviour
     [SerializeField] private AudioClip castlerHit;
 
 
-
-
+    private CameraShake cameraShake;
     private PlaySound enemyBody;
     private int _MoneyAmount = 50;
     private int currentHealth;
@@ -38,6 +37,7 @@ public class EnemyMovement : MonoBehaviour
     public UnityEvent OnDied;
     void Start()
     {
+        cameraShake = Camera.main.GetComponent<CameraShake>();
         currentHealth = maxHealth;
         UpdateHealthBar();
 
@@ -72,7 +72,8 @@ public class EnemyMovement : MonoBehaviour
         if (transform.position.y < -8.81)
         {
             AudioSource.PlayClipAtPoint(castlerHit, transform.position, soundVolume);
-            CameraShakerHandler.Shake(explosionShakeData);
+            //CameraShakerHandler.Shake(explosionShakeData);
+            cameraShake.Shake();
             Destroy(gameObject);
             vignette.SetActive(false);
 
