@@ -5,7 +5,7 @@ using UnityEngine.UI;
 using UnityEngine.Events;
 using FirstGearGames.SmoothCameraShaker;
 
-public class EnemyMovement : MonoBehaviour
+public class FinalEnemy : MonoBehaviour
 {
 
     //public ShakeData explosionShakeData;
@@ -33,6 +33,9 @@ public class EnemyMovement : MonoBehaviour
     private Tween healthBarFillTween;
     private Tween healthBarColorTween;
     private bool isDead = false;
+    private float directionChangeCooldown = 0.1f;
+    private float timeSinceLastDirectionChange = 0f;
+    private float ySpeed = -1f;
 
 
     public UnityEvent OnDied;
@@ -61,26 +64,28 @@ public class EnemyMovement : MonoBehaviour
 
     void Update()
     {
+        timeSinceLastDirectionChange += Time.deltaTime;
 
-        transform.position += Vector3.down * speed * Time.deltaTime;
+        Vector3 newPosition = transform.position + new Vector3(speed * Time.deltaTime, ySpeed * Time.deltaTime, 0);
 
-        if(transform.position.y < -7.8)
+        if (timeSinceLastDirectionChange > directionChangeCooldown && (newPosition.x > -2.2f || newPosition.x < -6.2f))
+        {
+            speed = -speed;
+            timeSinceLastDirectionChange = 0f; // Reset the cooldown timer
+        }
+        transform.position = newPosition;
+
+
+        if (transform.position.y < -7.8f)
         {
             vignette.SetActive(true);
-            //Debug.Log("VIGNETTE TRUE");
         }
 
-        if (transform.position.y < -8.81)
+        if (transform.position.y < -8.81f)
         {
             AudioSource.PlayClipAtPoint(castlerHit, transform.position, soundVolume);
-            //CameraShakerHandler.Shake(explosionShakeData);
             cameraShake.Shake();
             Destroy(gameObject);
-            if(playerLivesManager.GetLives() > 1)
-            {
-                Debug.Log("LIVES " +  playerLivesManager.GetLives());
-                enemyManager.OnEnemyDefeated();
-            }
             vignette.SetActive(false);
 
             if (playerLivesManager != null)
@@ -88,20 +93,22 @@ public class EnemyMovement : MonoBehaviour
                 playerLivesManager.DeductLife();
                 Debug.Log("Life deducted. Remaining lives: " + playerLivesManager.GetLives());
             }
-            else
+
+            if (playerLivesManager.GetLives() > 1)
             {
-                Debug.LogWarning("PlayerLivesManager not found.");
+                enemyManager.OnEnemyDefeated();
             }
         }
     }
+
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         //if (collision.gameObject.CompareTag("Projectile"))
         //{
-            Debug.Log("Triggered");
-            TakeDamage(damage);
-            Destroy(collision.gameObject);
+        Debug.Log("Triggered");
+        TakeDamage(damage);
+        Destroy(collision.gameObject);
         //}
 
     }
@@ -125,7 +132,7 @@ public class EnemyMovement : MonoBehaviour
 
     private void TakeDamage(int damage)
     {
-        if(this.transform.position.y < -1.5)
+        if (this.transform.position.y < -1.5)
         {
             int previousHealth = currentHealth;
             currentHealth -= damage;
@@ -145,9 +152,9 @@ public class EnemyMovement : MonoBehaviour
 
             if (currentHealth <= 0)
             {
-               
 
-                if(!isDead) FindObjectOfType<EnemyManager>().OnEnemyDefeated();
+
+                if (!isDead) FindObjectOfType<EnemyManager>().OnEnemyDefeated();
                 isDead = true;
                 AddMoney(_MoneyAmount);
 

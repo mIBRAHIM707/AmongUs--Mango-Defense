@@ -15,7 +15,7 @@ public class PlayerLivesManager : MonoBehaviour
 
     public void DeductLife()
     {
-        lives--;
+        this.lives--;
         Debug.Log("Life deducted. Remaining lives: " + lives); // Debug log to verify life deduction
         UpdateLivesUI();
 
@@ -51,7 +51,7 @@ public class PlayerLivesManager : MonoBehaviour
 
     public int GetLives()
     {
-        return lives;
+        return this.lives;
     }
 
 
