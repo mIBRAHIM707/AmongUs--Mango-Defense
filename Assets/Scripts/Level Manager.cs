@@ -28,11 +28,9 @@ public class LevelManager : MonoBehaviour
 
     public void OnNextLevelButtonClicked()
     {
-        // Load the next level (make sure to set up the build settings with the correct scene indices)
         int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
         int nextSceneIndex = currentSceneIndex + 1;
 
-        // Optionally, you could check if the next scene exists
         if (Application.CanStreamedLevelBeLoaded(nextSceneIndex))
         {
             SceneManager.LoadScene(nextSceneIndex);

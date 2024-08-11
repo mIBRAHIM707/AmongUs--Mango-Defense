@@ -454,23 +454,13 @@ MonoBehaviour:
     m_NumAlphaKeys: 2
   playerMoneyManager: {fileID: 0}
   playerLivesManager: {fileID: 0}
+  vignette: {fileID: 0}
   deathSound: {fileID: 8300000, guid: bf9e1a40722112f4bbe52835b35c6f30, type: 3}
   soundVolume: 1
+  castlerHit: {fileID: 0}
   OnDied:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 950708265061115925}
-        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
-        m_MethodName: SetTrigger
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: IsDead
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!61 &3364238870346109348
 BoxCollider2D:
   m_ObjectHideFlags: 0
