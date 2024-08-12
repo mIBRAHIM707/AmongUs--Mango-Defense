@@ -399,10 +399,6 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1662754628963287772, guid: 774c625d425db6e4fb00509889c5de26, type: 3}
-      propertyPath: vignette
-      value: 
-      objectReference: {fileID: 611047928}
-    - target: {fileID: 1662754628963287772, guid: 774c625d425db6e4fb00509889c5de26, type: 3}
       propertyPath: castlerHit
       value: 
       objectReference: {fileID: 8300000, guid: 121bf03e21863ce4ba9b7d034fdbb539, type: 3}
@@ -428,7 +424,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8041362418639828516, guid: 774c625d425db6e4fb00509889c5de26, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.1
+      value: 4.7
       objectReference: {fileID: 0}
     - target: {fileID: 8041362418639828516, guid: 774c625d425db6e4fb00509889c5de26, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1563,117 +1559,6 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 567390422}
-  m_CullTransparentMesh: 1
---- !u!1 &611047928
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 611047929}
-  m_Layer: 5
-  m_Name: Vignette
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!224 &611047929
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 611047928}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 633119599}
-  m_Father: {fileID: 1570070433}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!1 &633119598
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 633119599}
-  - component: {fileID: 633119601}
-  - component: {fileID: 633119600}
-  m_Layer: 5
-  m_Name: Image
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &633119599
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 633119598}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 13.275849, y: 25.270819, z: 12.796}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 611047929}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &633119600
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 633119598}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 1a15bc85b075c344e97a828e6030702b, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &633119601
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 633119598}
   m_CullTransparentMesh: 1
 --- !u!1 &751437453
 GameObject:
@@ -3152,10 +3037,6 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1662754628963287772, guid: 774c625d425db6e4fb00509889c5de26, type: 3}
-      propertyPath: vignette
-      value: 
-      objectReference: {fileID: 611047928}
-    - target: {fileID: 1662754628963287772, guid: 774c625d425db6e4fb00509889c5de26, type: 3}
       propertyPath: castlerHit
       value: 
       objectReference: {fileID: 8300000, guid: 121bf03e21863ce4ba9b7d034fdbb539, type: 3}
@@ -3398,7 +3279,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08183e1037c7bd345992291d27b55352, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lives: 3
+  lives: 1
   gameOverPanel: {fileID: 1656430505}
   livesText: {fileID: 1943066316}
 --- !u!4 &1073374947
@@ -3986,11 +3867,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 824771482219681658, guid: 589d775c2fd69f948ba764a84f01135f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.1
+      value: -2.2
       objectReference: {fileID: 0}
     - target: {fileID: 824771482219681658, guid: 589d775c2fd69f948ba764a84f01135f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.7
+      value: 3.7
       objectReference: {fileID: 0}
     - target: {fileID: 824771482219681658, guid: 589d775c2fd69f948ba764a84f01135f, type: 3}
       propertyPath: m_LocalPosition.z
@@ -4029,9 +3910,9 @@ PrefabInstance:
       value: BatEnemy
       objectReference: {fileID: 0}
     - target: {fileID: 4806874102440494723, guid: 589d775c2fd69f948ba764a84f01135f, type: 3}
-      propertyPath: vignette
-      value: 
-      objectReference: {fileID: 611047928}
+      propertyPath: speed
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 4806874102440494723, guid: 589d775c2fd69f948ba764a84f01135f, type: 3}
       propertyPath: castlerHit
       value: 
@@ -4572,7 +4453,6 @@ GameObject:
   - component: {fileID: 1526167147}
   - component: {fileID: 1526167146}
   - component: {fileID: 1526167145}
-  - component: {fileID: 1526167148}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -4654,22 +4534,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1526167148
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1526167144}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a9747a7528e095340a06de1daaaa09a7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  duration: 0.5
-  strength: 0.3
-  vibrato: 10
-  randomness: 90
 --- !u!1 &1542937604
 GameObject:
   m_ObjectHideFlags: 0
@@ -4784,7 +4648,6 @@ RectTransform:
   - {fileID: 1262560989}
   - {fileID: 1656430506}
   - {fileID: 264644590}
-  - {fileID: 611047929}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -6641,7 +6504,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 824771482219681658, guid: 589d775c2fd69f948ba764a84f01135f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.61
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 824771482219681658, guid: 589d775c2fd69f948ba764a84f01135f, type: 3}
       propertyPath: m_LocalPosition.z
@@ -6680,9 +6543,9 @@ PrefabInstance:
       value: BatEnemy (1)
       objectReference: {fileID: 0}
     - target: {fileID: 4806874102440494723, guid: 589d775c2fd69f948ba764a84f01135f, type: 3}
-      propertyPath: vignette
-      value: 
-      objectReference: {fileID: 611047928}
+      propertyPath: speed
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 4806874102440494723, guid: 589d775c2fd69f948ba764a84f01135f, type: 3}
       propertyPath: castlerHit
       value: 
@@ -6732,9 +6595,9 @@ PrefabInstance:
       value: REDen (3)
       objectReference: {fileID: 0}
     - target: {fileID: 6768899397134075380, guid: 84405b66e2b404e42a390d8d3dc16b8e, type: 3}
-      propertyPath: vignette
-      value: 
-      objectReference: {fileID: 611047928}
+      propertyPath: speed
+      value: 0.2
+      objectReference: {fileID: 0}
     - target: {fileID: 6768899397134075380, guid: 84405b66e2b404e42a390d8d3dc16b8e, type: 3}
       propertyPath: castlerHit
       value: 
@@ -6761,7 +6624,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8847225020076501485, guid: 84405b66e2b404e42a390d8d3dc16b8e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -5.99
+      value: 0.7
       objectReference: {fileID: 0}
     - target: {fileID: 8847225020076501485, guid: 84405b66e2b404e42a390d8d3dc16b8e, type: 3}
       propertyPath: m_LocalPosition.z
