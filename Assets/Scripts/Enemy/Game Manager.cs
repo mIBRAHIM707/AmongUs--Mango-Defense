@@ -4,6 +4,7 @@ using System.Collections.Generic;
 public class GameManager : MonoBehaviour
 {
     [SerializeField] private List<EnemyMovement> enemies = new List<EnemyMovement>();
+    [SerializeField] private List<FinalEnemy> Finalenemies = new List<FinalEnemy>();
     [SerializeField] private PlayerMoneyManager playerMoneyManager;
 
     public void RegisterEnemy(EnemyMovement enemy)
@@ -36,6 +37,11 @@ public class GameManager : MonoBehaviour
                 PlayerPrefs.Save();
 
                 foreach (var enemy in enemies)
+                {
+                    enemy.UpgradeDamage();
+                }
+
+                foreach (var enemy in Finalenemies)
                 {
                     enemy.UpgradeDamage();
                 }

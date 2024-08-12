@@ -112,8 +112,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8847225020076501485}
-  - component: {fileID: 6768899397134075380}
   - component: {fileID: 3587784449132748263}
+  - component: {fileID: 5659549395377653386}
   m_Layer: 0
   m_Name: REDen (3)
   m_TagString: Enemy
@@ -138,63 +138,6 @@ Transform:
   - {fileID: 1010194770508363672}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6768899397134075380
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2276421099374515214}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f0f0cee202ac480428958b0677658d34, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 0.15
-  healthBar: {fileID: 7090640715771531224}
-  damage: 40
-  damageUpgradeAmount: 10
-  maxHealth: 250
-  fillSpeed: 1
-  colorGradient:
-    serializedVersion: 2
-    key0: {r: 0.99607843, g: 0.039215736, b: 0.03921567, a: 1}
-    key1: {r: 0.96385556, g: 0.99607843, b: 0.03921567, a: 1}
-    key2: {r: 0.1764706, g: 0.9960785, b: 0.039215688, a: 0}
-    key3: {r: 0, g: 0, b: 0, a: 0}
-    key4: {r: 0, g: 0, b: 0, a: 0}
-    key5: {r: 0, g: 0, b: 0, a: 0}
-    key6: {r: 0, g: 0, b: 0, a: 0}
-    key7: {r: 0, g: 0, b: 0, a: 0}
-    ctime0: 14264
-    ctime1: 39128
-    ctime2: 65535
-    ctime3: 0
-    ctime4: 0
-    ctime5: 0
-    ctime6: 0
-    ctime7: 0
-    atime0: 0
-    atime1: 32768
-    atime2: 0
-    atime3: 0
-    atime4: 0
-    atime5: 0
-    atime6: 0
-    atime7: 0
-    m_Mode: 1
-    m_ColorSpace: -1
-    m_NumColorKeys: 3
-    m_NumAlphaKeys: 2
-  playerMoneyManager: {fileID: 0}
-  playerLivesManager: {fileID: 0}
-  vignette: {fileID: 3229279836800517120, guid: 9474d7a39cd3e804abed98f201edc07e, type: 3}
-  deathSound: {fileID: 8300000, guid: bf9e1a40722112f4bbe52835b35c6f30, type: 3}
-  soundVolume: 1
-  castlerHit: {fileID: 8300000, guid: 121bf03e21863ce4ba9b7d034fdbb539, type: 3}
-  OnDied:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!61 &3587784449132748263
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -240,6 +183,76 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &5659549395377653386
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2276421099374515214}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0f0cee202ac480428958b0677658d34, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0.3
+  healthBar: {fileID: 7090640715771531224}
+  damage: 40
+  damageUpgradeAmount: 10
+  maxHealth: 250
+  fillSpeed: 1
+  colorGradient:
+    serializedVersion: 2
+    key0: {r: 0.99607843, g: 0.039215736, b: 0.03921567, a: 1}
+    key1: {r: 0.96385556, g: 0.99607843, b: 0.03921567, a: 1}
+    key2: {r: 0.1764706, g: 0.9960785, b: 0.039215688, a: 0}
+    key3: {r: 0, g: 0, b: 0, a: 0}
+    key4: {r: 0, g: 0, b: 0, a: 0}
+    key5: {r: 0, g: 0, b: 0, a: 0}
+    key6: {r: 0, g: 0, b: 0, a: 0}
+    key7: {r: 0, g: 0, b: 0, a: 0}
+    ctime0: 14264
+    ctime1: 39128
+    ctime2: 65535
+    ctime3: 0
+    ctime4: 0
+    ctime5: 0
+    ctime6: 0
+    ctime7: 0
+    atime0: 0
+    atime1: 32768
+    atime2: 0
+    atime3: 0
+    atime4: 0
+    atime5: 0
+    atime6: 0
+    atime7: 0
+    m_Mode: 1
+    m_ColorSpace: -1
+    m_NumColorKeys: 3
+    m_NumAlphaKeys: 2
+  playerMoneyManager: {fileID: 0}
+  playerLivesManager: {fileID: 0}
+  enemyManager: {fileID: 0}
+  vignette: {fileID: 3229279836800517120, guid: 9474d7a39cd3e804abed98f201edc07e, type: 3}
+  deathSound: {fileID: 8300000, guid: bf9e1a40722112f4bbe52835b35c6f30, type: 3}
+  soundVolume: 1
+  castlerHit: {fileID: 8300000, guid: 121bf03e21863ce4ba9b7d034fdbb539, type: 3}
+  OnDied:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6667414307536032031}
+        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
+        m_MethodName: SetTrigger
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: IsDead
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &4019180698586168164
 GameObject:
   m_ObjectHideFlags: 0

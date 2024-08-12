@@ -122,11 +122,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0f0cee202ac480428958b0677658d34, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.15
+  speed: 0.5
   healthBar: {fileID: 2860034903609066522}
   damage: 40
   damageUpgradeAmount: 10
-  maxHealth: 250
+  maxHealth: 150
   fillSpeed: 1
   colorGradient:
     serializedVersion: 2
@@ -160,13 +160,26 @@ MonoBehaviour:
     m_NumAlphaKeys: 2
   playerMoneyManager: {fileID: 0}
   playerLivesManager: {fileID: 0}
+  enemyManager: {fileID: 0}
   vignette: {fileID: 0}
-  deathSound: {fileID: 8300000, guid: bf9e1a40722112f4bbe52835b35c6f30, type: 3}
+  deathSound: {fileID: 8300000, guid: 530657f44dc13cf4aa35285f6024708f, type: 3}
   soundVolume: 1
   castlerHit: {fileID: 8300000, guid: 121bf03e21863ce4ba9b7d034fdbb539, type: 3}
   OnDied:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4124646486601357852}
+        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
+        m_MethodName: SetTrigger
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: IsDead
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!61 &2449937043222529984
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -543,7 +556,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 4.14, y: 7.24}
+  m_AnchoredPosition: {x: 4.14, y: 7.07}
   m_SizeDelta: {x: 182, y: 324}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &2665997815758432428

@@ -13,7 +13,7 @@ public class EnemyManager : MonoBehaviour
 
     void Start()
     {
-        totalEnemies = FindObjectsOfType<EnemyMovement>().Length;
+        totalEnemies = FindObjectsOfType<EnemyMovement>().Length + FindObjectsOfType<FinalEnemy>().Length;
         remainingEnemies = totalEnemies;
         Debug.Log(remainingEnemies);
         UpdateEnemiesLeftUI(remainingEnemies, totalEnemies);

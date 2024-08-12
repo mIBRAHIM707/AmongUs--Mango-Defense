@@ -25,7 +25,6 @@ public class EnemyMovement : MonoBehaviour
     [SerializeField] private float soundVolume = 1.0f;
     [SerializeField] private AudioClip castlerHit;
 
-
     private CameraShake cameraShake;
     private PlaySound enemyBody;
     private int _MoneyAmount = 50;
@@ -64,7 +63,7 @@ public class EnemyMovement : MonoBehaviour
 
         transform.position += Vector3.down * speed * Time.deltaTime;
 
-        if(transform.position.y < -7.8)
+        if (transform.position.y < -7.8)
         {
             vignette.SetActive(true);
             //Debug.Log("VIGNETTE TRUE");
@@ -76,9 +75,9 @@ public class EnemyMovement : MonoBehaviour
             //CameraShakerHandler.Shake(explosionShakeData);
             cameraShake.Shake();
             Destroy(gameObject);
-            if(playerLivesManager.GetLives() > 1)
+            if (playerLivesManager.GetLives() > 1)
             {
-                Debug.Log("LIVES " +  playerLivesManager.GetLives());
+                Debug.Log("LIVES " + playerLivesManager.GetLives());
                 enemyManager.OnEnemyDefeated();
             }
             vignette.SetActive(false);
@@ -99,9 +98,9 @@ public class EnemyMovement : MonoBehaviour
     {
         //if (collision.gameObject.CompareTag("Projectile"))
         //{
-            Debug.Log("Triggered");
-            TakeDamage(damage);
-            Destroy(collision.gameObject);
+        Debug.Log("Triggered");
+        TakeDamage(damage);
+        Destroy(collision.gameObject);
         //}
 
     }
@@ -125,7 +124,7 @@ public class EnemyMovement : MonoBehaviour
 
     private void TakeDamage(int damage)
     {
-        if(this.transform.position.y < -1.5)
+        if (this.transform.position.y < -1.5)
         {
             int previousHealth = currentHealth;
             currentHealth -= damage;
@@ -145,9 +144,9 @@ public class EnemyMovement : MonoBehaviour
 
             if (currentHealth <= 0)
             {
-               
 
-                if(!isDead) FindObjectOfType<EnemyManager>().OnEnemyDefeated();
+
+                if (!isDead) FindObjectOfType<EnemyManager>().OnEnemyDefeated();
                 isDead = true;
                 AddMoney(_MoneyAmount);
 
@@ -155,7 +154,8 @@ public class EnemyMovement : MonoBehaviour
                 {
                     AudioSource.PlayClipAtPoint(deathSound, transform.position, soundVolume);
                 }
-                OnDied.Invoke();  //FOR ANIMATION
+                OnDied.Invoke();
+                  //FOR ANIMATION
                 Destroy(gameObject, 1f);
             }
         }

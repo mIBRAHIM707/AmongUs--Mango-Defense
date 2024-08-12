@@ -11,6 +11,7 @@ public class FinalEnemy : MonoBehaviour
     //public ShakeData explosionShakeData;
 
     [SerializeField] private float speed;
+    [SerializeField] private float ySpeed = -0.4f;
     [SerializeField] private Image healthBar;
     [SerializeField] public int damage;
     [SerializeField] public int damageUpgradeAmount;
@@ -35,7 +36,6 @@ public class FinalEnemy : MonoBehaviour
     private bool isDead = false;
     private float directionChangeCooldown = 0.1f;
     private float timeSinceLastDirectionChange = 0f;
-    private float ySpeed = -1f;
 
 
     public UnityEvent OnDied;
@@ -81,7 +81,7 @@ public class FinalEnemy : MonoBehaviour
             vignette.SetActive(true);
         }
 
-        if (transform.position.y < -8.81f)
+        if (transform.position.y < -8.41f)
         {
             AudioSource.PlayClipAtPoint(castlerHit, transform.position, soundVolume);
             cameraShake.Shake();

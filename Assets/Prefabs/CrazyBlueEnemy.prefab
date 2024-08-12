@@ -30,7 +30,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 4.15, y: 6.51, z: 9.93431}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.3949467, y: 1.3949467, z: 1.3949467}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8041362418639828516}
@@ -247,7 +247,7 @@ RectTransform:
   m_GameObject: {fileID: 3623534801578768486}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 9.93431}
-  m_LocalScale: {x: 0.025, y: 0.02, z: 1}
+  m_LocalScale: {x: 0.030160997, y: 0.024128795, z: 1.2064399}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 342911302651958045}
@@ -256,7 +256,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 4.14, y: 7.24}
+  m_AnchoredPosition: {x: 4.14, y: 7.27}
   m_SizeDelta: {x: 182, y: 324}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &5770321494972104110
@@ -280,7 +280,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_TargetDisplay: 0
 --- !u!114 &2410441508834924297
 MonoBehaviour:
@@ -499,7 +499,7 @@ Transform:
   m_GameObject: {fileID: 9179500832108324775}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.8, y: -1.31, z: -9.93431}
+  m_LocalPosition: {x: -6.7992, y: -6.555, z: -13.569}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -557,13 +557,26 @@ MonoBehaviour:
     m_NumAlphaKeys: 2
   playerMoneyManager: {fileID: 0}
   playerLivesManager: {fileID: 0}
+  enemyManager: {fileID: 0}
   vignette: {fileID: 0}
-  deathSound: {fileID: 8300000, guid: bf9e1a40722112f4bbe52835b35c6f30, type: 3}
+  deathSound: {fileID: 8300000, guid: 530657f44dc13cf4aa35285f6024708f, type: 3}
   soundVolume: 1
-  castlerHit: {fileID: 0}
+  castlerHit: {fileID: 8300000, guid: 121bf03e21863ce4ba9b7d034fdbb539, type: 3}
   OnDied:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 7687942554348261419}
+        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
+        m_MethodName: SetTrigger
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: IsDead
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!61 &6163212444863590227
 BoxCollider2D:
   m_ObjectHideFlags: 0
